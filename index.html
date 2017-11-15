@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cursos</title>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular-aria.min.js"></script>
+    <script src="js/angular-messages.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="js/angular-material.min.js"></script>
+    <link rel="stylesheet" href="css/angular-material.min.css">
+  	<!--icons-->
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css"/>
+    <!--Controller Js-->
+<style>
+a {
+    color:#fce38a;
+}
+</style>
+	</head>
+	<body>	
+  <head >
+		<nav class="navbar navbar-default" style="background-color:#f38181; ">
+				<div class="container">
+					<div class="navbar-header">
+						<a class="navbar-brand" style="color:#95e1d3;" href="/">Informática Segura</a>
+					</div>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#menu"><i class="fa fa-home"></i> Menu</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nivel<span class="caret"></span></a>
+							<ul class="dropdown-menu"> 
+								<li><a href="#basico">Básico</a></li>
+								<li><a href="#intermedio">Intermedio</a></li>
+								<li><a href="#avanzado">Avanzado</a></li>
+							</ul>
+						</li>
+						<li><a href="#noticias"><i class="fa fa-shield"></i> Noticias</a></li>
+						<li><a href="#tips"><i class="fa fa-comment"></i> Tips</a></li>
+						<li><a href="#ayuda"><i class="fa fa-comment"></i> Ayuda</a></li>
+						<li><a href="#acerca"><i class="fa fa-comment"></i> Acerca</a></li>
+					</ul>
+				</div>
+		</nav>
+  </head>
+<div ng-app="Courses" ng-controller="mainController" ng-cloak>
+    <div id="main">
+      <div ng-view></div>
+    <div>
+  </div>
+  <script src="js/controller.js"></script>
+  </body>
+</html>
