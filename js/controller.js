@@ -1,4 +1,4 @@
-var app = angular.module("Courses", ['ngMaterial','ngAnimate', 'ngSanitize','ngRoute','ngResource']);
+var app = angular.module("Courses", ['ngMaterial','ngAnimate', 'ngSanitize','ngRoute','ngResource','angularCSS']);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -12,7 +12,8 @@ app.config(function($routeProvider) {
     })
     .when('/basico', {
         templateUrl : 'html/basico.html',
-        controller  : 'mainController'
+        controller  : 'mainController',
+        css: ['css/flexslider.css','css/bootstrap.min.css','css/bootstrap.min.css','css/fancybox/jquery.fancybox.css','css/jcarousel.css','skins/default.css']
     })
     .when('/intermedio', {
         templateUrl : 'html/video.html',
@@ -45,7 +46,7 @@ app.config(function($routeProvider) {
 });
 
 app.controller('mainController', function($scope,$mdDialog) {
-    $scope.urlvideo = "assets/video/B1.mp4";
+    $scope.urlvideo = "video/B1.mp4";
     /*$scope.showAdvanced = function(ev) {
       $mdDialog.show({
         controller: DialogController,
