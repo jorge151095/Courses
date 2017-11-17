@@ -13,7 +13,7 @@ app.config(function($routeProvider) {
     .when('/basico', {
         templateUrl : 'html/basico.html',
         controller  : 'mainController',
-        css: ['css/flexslider.css','css/bootstrap.min.css','css/bootstrap.min.css','css/fancybox/jquery.fancybox.css','css/jcarousel.css','skins/default.css']
+        //css: ['css/flexslider.css','css/bootstrap.min.css','css/bootstrap.min.css','css/fancybox/jquery.fancybox.css','css/jcarousel.css','skins/default.css']
     })
     .when('/intermedio', {
         templateUrl : 'html/video.html',
