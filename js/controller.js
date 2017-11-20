@@ -1,75 +1,22 @@
-var app = angular.module("Courses", ['ngMaterial','ngAnimate', 'ngSanitize','ngRoute','ngResource','angularCSS']);
+//var app = angular.module("Courses", ['ngMaterial','ngAnimate', 'ngSanitize','ngRoute','ngResource','angularCSS']);
+var app = angular.module("Courses", ['ngRoute']);
 
-app.config(function($routeProvider) {
-    $routeProvider
-    .when('/', {
-        templateUrl : 'html/menu.html',
-        controller  : 'mainController'
-    })
-    .when('/menu', {
-        templateUrl : 'html/menu.html',
-        controller  : 'mainController'
-    })
-    .when('/basico', {
-        templateUrl : 'html/basico.html',
-        controller  : 'mainController',
-        //css: ['css/flexslider.css','css/bootstrap.min.css','css/bootstrap.min.css','css/fancybox/jquery.fancybox.css','css/jcarousel.css','skins/default.css']
-    })
-    .when('/intermedio', {
-        templateUrl : 'html/video.html',
-        controller  : 'mainController'
-    })
-    .when('/avanzado', {
-        templateUrl : 'html/avanzado.html',
-        controller  : 'mainController'
-    })
-    .when('/noticias', {
-        templateUrl : 'html/noticias.html',
-        controller  : 'mainController'
-    })
-    .when('/tips', {
-        templateUrl : 'html/tips.html',
-        controller  : 'mainController'
-    })
-    .when('/ayuda', {
-        templateUrl : 'html/ayuda.html',
-        controller  : 'mainController'
-    })
-    .when('/acerca', {
-        templateUrl : 'html/acerca.html',
-        controller  : 'mainController'
-    })
-    .when('/video', {
-        templateUrl : 'html/video.html',
-        controller  : 'mainController'
-    });
-});
+app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
 
-app.controller('mainController', function($scope,$mdDialog) {
-    $scope.urlvideo = "video/B1.mp4";
-    /*$scope.showAdvanced = function(ev) {
-      $mdDialog.show({
-        controller: DialogController,
-        templateUrl: './html/about.html',
-        parent: angular.element(document.body),
-        targetEvent: ev,
-        clickOutsideToClose:true,
-        fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
-      })
-      .then(function(answer) {
-        $scope.status = 'You said the information was '' + answer + ''.';
-      }, function() {
-        $scope.status = 'You cancelled the dialog.';
-      });
-    };*/
+	$scope.menuPrincipal = 'html/menu.html';
 
-    /*function DialogController($scope, $mdDialog) {
-      $scope.hide = function() {
-        $mdDialog.hide();
-      };
+	$scope.setActive = function(Opcion){
+			$scope.menuInicio      ="";
+			$scope.menuGuia        ="";
+			$scope.menuMenores     ="";
+			$scope.menuNoticias    ="";
+			$scope.menuSeguridad   ="";
+			$scope.menuTest        ="";
+			$scope.menuAyuda       ="";
+			$scope.menuAcerca      ="";
 
-      $scope.accept = function() {
-        $mdDialog.hide();
-      };
-    };*/
-});
+			$scope[Opcion] = "active";
+
+	}
+
+}]);

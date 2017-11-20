@@ -1,0 +1,30 @@
+<div class="titulo">
+  <div class="container">
+    <h3>Seguridad Imformatica</h3>
+  </div>
+</div>
+
+<div class="container" ng-controller = "info" style="margin-top:10px">
+  <div class="row">
+    <div class="col-sm-2">
+        <h4>Busqueda</h4>
+    </div>
+    <div class="col-sm-10">
+        <input type="text" ng-model = "search" class="form-control" placeholder="Ingrese un tema">
+    </div>
+  </div>
+    <div class="main row">
+        <div class="col-sm-3" ng-repeat = "topic in topics | filter:search">
+            <div class="thumbnail">
+                <img class = "img-responsive" alt="Imagen del cusro" src="img/base.jpg">
+                <div class="caption">
+                  <h4>{{topic.title}}</h4>
+                  <hr>
+                  <p>{{topic.summary}}</p>
+                  <hr>
+                  <p><a href="#anexo" class="btn btn-primary btn-block">Ir</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

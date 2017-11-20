@@ -5,3 +5,25 @@
     </div>
   </section>
 </md-content>
+<div class="container" ng-controller = "info">
+  <div class="main row" >
+      <div class="col-sm-3" ng-repeat = "topic in topics">
+          <div class="thumbnail">
+              <img class = "img-responsive" alt="Imagen del cusro" src="https://dummyimage.com/600x400/000000/ffffff">
+              <div class="caption">
+                <h4>{{topic.title}}</h4>
+                <hr>
+                <p>{{topic.summary}}</p>
+                <hr>
+                <p><a href="#" class="btn btn-primary btn-block">Ir</a></p>
+              </div>
+          </div>
+      </div>
+  </div>
+      <nav>
+					<ul class="pager">
+						<li class="previous"><a href="#">&larr; Anterior</a></li>
+            <li class="next"><a href="" ng-click = "siguiente()">Siguiente &rarr;</a></li>
+					</ul>
+				</nav>
+</div>
