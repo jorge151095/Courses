@@ -1,4 +1,4 @@
-var app = angular.module("Courses", ['ngMaterial','ngAnimate', 'ngSanitize','ngRoute','ngResource','angularCSS']);
+var app = angular.module("Courses", ['ngMaterial','ngAnimate', 'ngSanitize','ngRoute','ngResource','angularCSS','ngMdIcons']);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -47,6 +47,12 @@ app.config(function($routeProvider) {
 
 app.controller('mainController', function($scope,$mdDialog) {
     $scope.urlvideo = "video/B1.mp4";
+    $scope.bs1 = [
+        { name: 'Pepperoni', url: '' },
+        { name: 'Sausage', url: '' },
+        { name: 'Black Olives', url: '' },
+        { name: 'Green Peppers', url: '' }
+      ];
     /*$scope.showAdvanced = function(ev) {
       $mdDialog.show({
         controller: DialogController,
