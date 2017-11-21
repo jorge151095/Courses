@@ -24,7 +24,7 @@ app.config(function($routeProvider) {
         templateUrl : 'html/tests.html',
         controller: 'testCtrl'
     })
-    .when('/seguridad', {
+    .when('/cursos', {
         templateUrl : 'html/seguridad.html',
         controller  : 'seguridadCtrl'
     })
