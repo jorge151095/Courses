@@ -1,9 +1,9 @@
 app.config(function($routeProvider) {
     $routeProvider
-    .when('/',{
-			templateUrl: 'html/home.html',
-      controller: 'inicioCtrl'
-		})
+    .when('/menu',{
+	    templateUrl: 'html/home.html',
+        controller: 'mainCtrl'
+	})
     .when('/ayuda', {
         templateUrl : 'html/ayuda.html',
         controller: 'ayudaCtrl'
@@ -11,10 +11,7 @@ app.config(function($routeProvider) {
     .when('/acerca', {
         templateUrl : 'html/acerca.html',
         controller : 'acercaCtrl'
-    })/*
-    .when('/anexo', {
-        templateUrl : 'html/anexo.html',
-    })*/
+    })
     .when('/menores', {
         templateUrl : 'html/menores.html',
         controller: 'menoresCtrl'
@@ -31,11 +28,16 @@ app.config(function($routeProvider) {
         templateUrl : 'html/seguridad.html',
         controller  : 'seguridadCtrl'
     })
+    .when('/basico', {
+        templateUrl : 'html/basico.html',
+        controller  : 'seguridadCtrl'
+    })
     .when('/guia', {
         templateUrl : 'html/guia.html',
         controller: 'guiaCtrl'
     })
     .otherwise({
-			redirectTo: '/'
-		});
+        redirectTo: '/menu',
+        controller: 'mainCtrl'
+    });
 });

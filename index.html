@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html ng-app="Courses" ng-controller="mainCtrl">
+<html lang="en" ng-app="Courses" ng-cloak>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
@@ -7,6 +7,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Cursos</title>
+
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="js/angular.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
@@ -19,7 +20,7 @@
     <script src="js/angular-material.min.js"></script>
     <link rel="stylesheet" href="css/angular-material.min.css">
   	<!--icons-->
-  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
     <!-- Controller JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-css/1.0.8/angular-css.js"></script>
@@ -33,7 +34,6 @@
     <script src="js/testCtrl.js"></script>
     <script src="js/ayudaCtrl.js"></script>
     <script src="js/acercaCtrl.js"></script>
-
     	<!-- css -->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
@@ -41,23 +41,58 @@
     <link href="css/flexslider.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/master.css">
+
     <!-- Theme skin -->
     <link href="skins/default.css" rel="stylesheet" />
 
+
+<!--<style>
+a {
+    color:#fce38a;
+}
+</style>-->
 	</head>
-	<body >
-  <!-- start header -->
-  <div id="wrapper">
-      <div ng-include = "menuPrincipal"></div>
+	<body >	
+  <div id="wrapper" >
+      <!-- start header -->
+      <!--<nav class="navbar navbar-default" style="background-color:#f38181; "></nav>-->
+      <header id="wrapper">
+        <div class="navbar navbar-default navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"> <img src="img/logo.jpg" alt="" height=300% ></a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="#">Inicio</a></li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Contenido<b class=" icon-angle-down"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#guia" > Guias y tips</a></li>
+                    <li><a href="#menores">Menores</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
+                    <li><a href="#seguridad">Seguridad Imformatica</a></li>
+                    <li><a href="#tests">Test</a></li>
+                  </ul>
+                </li>
+                <li><a href="#ayuda">Ayuda</a></li>
+                <li><a href="#acerca">Acerca</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- End header -->
+      <div ng-view></div>
   </div>
-
-  <!-- End header -->
-
-  <div ng-view></div>
-
-
-
-	<!-- javascript-->
+  
+  	<!-- javascript
+    ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
 
 	<script src="js/jquery.js"></script>
