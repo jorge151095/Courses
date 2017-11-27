@@ -32,6 +32,14 @@ app.config(function($routeProvider) {
         templateUrl : 'html/basico.html',
         controller  : 'seguridadCtrl'
     })
+    .when('/intermedio', {
+        templateUrl : 'html/intermedio.html',
+        controller  : 'seguridadCtrl'
+    })
+    .when('/avanzado', {
+        templateUrl : 'html/avanzado.html',
+        controller  : 'seguridadCtrl'
+    })
     .when('/guia', {
         templateUrl : 'html/guia.html',
         controller: 'guiaCtrl'

@@ -1,30 +1,55 @@
-<div class="titulo">
-  <div class="container">
-    <h3>Seguridad Imformatica</h3>
-  </div>
+
+<div class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="33" layout="column">
+    <a href="#basico">
+    <md-card>
+        <img src="img/C1.jpeg" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">Básico</span>
+        </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+        <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+        </p>
+    </md-card>
+    </a>
+    </div>
+    <div flex-xs flex-gt-xs="33" layout="column">
+        <a href="#intermedio">
+        <md-card>
+            <img src="img/c5.jpeg" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Intermedio</span>
+            </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+            <p>
+                The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+                two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+            </p>
+        </md-card>
+        </a>
+    </div>
+    <div flex-xs flex-gt-xs="33" layout="column">
+        <a href="#avanzado">
+        <md-card>
+            <img src="img/C3.jpg" href="#avanzado" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Avanzado</span>
+            </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+            <p>
+                The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+                two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+            </p>
+        </md-card>
+        </a>
+    </div>
 </div>
 
-<div class="container" style="margin-top:10px">
-  <div class="row">
-    <div class="col-sm-2">
-        <h4>Busqueda</h4>
-    </div>
-    <div class="col-sm-10">
-        <input type="text" ng-model = "search" class="form-control" placeholder="Ingrese un tema">
-    </div>
-  </div>
-    <div class="main row">
-        <div class="col-sm-3" ng-repeat = "topic in topics | filter:search">
-            <div class="thumbnail">
-                <img class = "img-responsive" alt="Imagen del cusro" src="img/base.jpg">
-                <div class="caption">
-                  <h4>{{topic.title}}</h4>
-                  <hr>
-                  <p>{{topic.summary}}</p>
-                  <hr>
-                  <p><a href="#anexo" class="btn btn-primary btn-block">Ir</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
