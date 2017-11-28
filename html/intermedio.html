@@ -1,33 +1,3 @@
-
-<!--<md-content>
-  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
-    <div class="container">
-      <h3>INTERMEDIO</h3>
-    </div>
-  </section>
-</md-content>
-<div class="container" ng-controller = "info">
-  <div class="main row" >
-      <div class="col-sm-3" ng-repeat = "topic in topics">
-          <div class="thumbnail">
-              <img class = "img-responsive" alt="Imagen del cusro" src="https://dummyimage.com/600x400/000000/ffffff">
-              <div class="caption">
-                <h4>{{topic.title}}</h4>
-                <hr>
-                <p>{{topic.summary}}</p>
-                <hr>
-                <p><a href="#" class="btn btn-primary btn-block">Ir</a></p>
-              </div>
-          </div>
-      </div>
-  </div>
-      <nav>
-					<ul class="pager">
-						<li class="previous"><a href="#">&larr; Anterior</a></li>
-            <li class="next"><a href="" ng-click = "siguiente()">Siguiente &rarr;</a></li>
-					</ul>
-				</nav>
-</div>-->
 <br><br>
 <div style="background-color: #fff8df;">
 <article class="col-xs-1 col-sm-1 col-md-1  col-lg-1"></article>
@@ -35,9 +5,9 @@
   <div>
       <md-card>
         <md-list>
-            <md-subheader class="md-no-sticky">1. Introducción ¿Qué hay que proteger?</md-subheader>
+            <md-subheader class="md-no-sticky">1. Introducción</md-subheader>
             </md-list-item>
-            <md-list-item ng-repeat="prd in bs1" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
+            <md-list-item ng-repeat="prd in is1" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
                 <div class="md-list-item-text" layout="row">
                     <span flex="">{{ prd.name }}</span>
                 </div>
@@ -49,9 +19,9 @@
       <br>
       <md-card>
         <md-list>
-          <md-subheader class="md-no-sticky">2. Conceptos básicos</md-subheader>
+          <md-subheader class="md-no-sticky">2. Definición de conceptos intermedios</md-subheader>
           </md-list-item>
-          <md-list-item ng-repeat="prd in bs2" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
+          <md-list-item ng-repeat="prd in is2" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
               <div class="md-list-item-text" layout="row">
                   <span flex="">{{ prd.name }}</span>
               </div>
@@ -63,9 +33,9 @@
       <br>
       <md-card>
         <md-list>
-          <md-subheader class="md-no-sticky">3. Criterios de seguridad</md-subheader>
+          <md-subheader class="md-no-sticky">3. Vulnerabilidad</md-subheader>
           </md-list-item>
-          <md-list-item ng-repeat="prd in bs3" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
+          <md-list-item ng-repeat="prd in is3" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
               <div class="md-list-item-text" layout="row">
                   <span flex="">{{ prd.name }}</span>
               </div>
@@ -77,9 +47,9 @@
       <br>
       <md-card>
         <md-list>
-          <md-subheader class="md-no-sticky">4. Seguridad en internet</md-subheader>
+          <md-subheader class="md-no-sticky">4. Ataques y tipos</md-subheader>
           </md-list-item>
-          <md-list-item ng-repeat="prd in bs4" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
+          <md-list-item ng-repeat="prd in is4" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
               <div class="md-list-item-text" layout="row">
                   <span flex="">{{ prd.name }}</span>
               </div>
@@ -91,9 +61,22 @@
       <br>
       <md-card>
         <md-list>
-          <md-subheader class="md-no-sticky">5. Instalar un antivirus</md-subheader>
+          <md-subheader class="md-no-sticky">5. Protección contra Adware, Spyware y Malware</md-subheader>
           </md-list-item>
-          <md-list-item ng-repeat="prd in bs5" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
+          <md-list-item ng-repeat="prd in is5" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
+              <div class="md-list-item-text" layout="row">
+                  <span flex="">{{ prd.name }}</span>
+              </div>
+              <ng-md-icon icon="play_circle_fill" aria-label="Eliminar" class="md-secondary md-hue-3"></ng-md-icon>
+              <md-divider></md-divider>
+          </md-list-item>
+        </md-list>
+      </md-card>
+      <md-card>
+        <md-list>
+          <md-subheader class="md-no-sticky">6. Principios fundamentales de la seguridad informática</md-subheader>
+          </md-list-item>
+          <md-list-item ng-repeat="prd in is6" ng-click="changeUrl(prd.url, $event)" class="md-2-line">
               <div class="md-list-item-text" layout="row">
                   <span flex="">{{ prd.name }}</span>
               </div>
