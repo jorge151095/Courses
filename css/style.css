@@ -1993,3 +1993,8 @@ article img.pull-right, article .align-right{
 .testCarousel{
 	color:rgb(255, 255, 255);
 }
+
+.newpaper{
+	font-family: 'Times New Roman', Times, serif; 
+	font-size:1.5em;
+}

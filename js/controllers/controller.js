@@ -1,5 +1,4 @@
 var app = angular.module("Courses", ['ngMaterial','ngAnimate', 'ngSanitize','ngRoute','ngResource','ngMdIcons','ui.bootstrap']);
-
 app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;

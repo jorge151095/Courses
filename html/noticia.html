@@ -1,0 +1,38 @@
+<div class="titulo">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <br>
+                
+                <h1 style=" color: #000; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0;">{{title}}</h1>
+                
+                <hr>
+                <h4><p style="color:rgb(68, 76, 80)">{{summary}}</p></h4>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-7">
+                <md-content layout-gt-sm="row" >
+                    <center><img class = 'img-responsive' alt='Imagen' src='{{image}}'></center>
+                    <hr>
+                </md-content>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-7">
+                <b><p style="color:#37474F;">{{date}}</p></b>
+                <p style="font-family: 'Times New Roman', Times, serif; font-size:1.5em;">
+                <div ng-bind-html="content">    
+                </div>
+                </p>
+                <b>Noticia completa <a href={{link}}>Aquí</a></b><br><br>
+                <a href="#noticias"><img src="img/bb.png"></a>
+                <!--<md-button style="background-color:#95e1d3" href="#noticias">Regresar</md-button>-->
+            </div>
+        </div>
+        
+</div>
+    

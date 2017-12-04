@@ -1,0 +1,28 @@
+<div class="titulo">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <br>
+                
+                <h1 style=" color: #000; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0;">Prueba de Ubicación</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5">
+                <md-content layout-gt-sm="row" >
+                    <center><img class = 'img-responsive' alt='Imagen' src='{{img}}'></center>
+                    <hr>
+                </md-content>
+            </div>
+            <div class="col-sm-5">
+                    <h4>{{q}}</h4>
+                    <input type="radio" ng-model="result" name="gender" ng-value="1" checked> {{o1}}<br>
+                    <input type="radio" ng-model="result" name="gender" ng-value="2"> {{o2}}<br>
+                    <input type="radio" ng-model="result" name="gender" ng-value="3"> {{o3}}<br><br>
+                    <md-button type="submit" ng-click="next()" style="background-color:#95e1d3">Siguiente</md-button>
+                    Aciertos: {{j}}
+                </div>
+            </div>
+        </div>        
+</div>

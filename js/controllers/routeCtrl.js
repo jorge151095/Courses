@@ -20,8 +20,16 @@ app.config(function($routeProvider) {
         templateUrl : 'html/noticias.html',
         controller: 'noticiasCtrl'
     })
+    .when('/noticia', {
+        templateUrl : 'html/noticia.html',
+        controller: 'noticiasCtrl'
+    })
     .when('/tests', {
         templateUrl : 'html/tests.html',
+        controller: 'testCtrl'
+    })
+    .when('/test', {
+        templateUrl : 'html/test.html',
         controller: 'testCtrl'
     })
     .when('/cursos', {
