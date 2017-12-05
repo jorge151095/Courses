@@ -7,11 +7,36 @@
           <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
             <img ng-src="{{slide.image}}" style="margin:auto;width:100%;max-height:350px"/>
             <div class="carousel-caption">
-              <h1 style="color:#fff">{{slide.title}}</h1>
-              <p>{{slide.text}}</p>
+              <h1 style="color:#fff;text-shadow: 0 0 3px #000; /* horizontal-offset vertical-offset 'blur' colour */
+              -moz-text-shadow: 0 0 3px #000;
+              -webkit-text-shadow: 0 0 3px #000;">{{slide.title}}</h1>
+              <h4 style="color:#fff;text-shadow: 0 0 3px #000; /* horizontal-offset vertical-offset 'blur' colour */
+              -moz-text-shadow: 0 0 3px #000;
+              -webkit-text-shadow: 0 0 3px #000;">{{slide.text}}</h4>
             </div>
           </div>
         </div>
       </div>
     </div>
 </article>
+<article class="col-xs-0 col-sm-0 col-md-1  col-lg-2"></article>
+<!--End Carrousel-->
+
+<article class="col-xs-0 col-sm-0 col-md-1  col-lg-1"></article>
+<!--¿Quienes somos?-->
+<!--<article class="col-xs-12 col-sm-12 col-md-10  col-lg-10">
+  <a href="#acerca">
+    <md-card>
+        <img src="img/inicio/who2.jpg" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">¿Quienes somos?</span>
+        </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+        <p>
+            Conoce todo sobre nosotros, nuestra misión, visión y objetivos como empresa.
+        </p>
+    </md-card>
+  </a>
+</article>-->

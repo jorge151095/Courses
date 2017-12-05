@@ -6,24 +6,38 @@ app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
     var slides = $scope.slides = [];
   
     slides.push({
-      image:'img/C1.jpeg',
-      text: 'welcome 1',
-      title: 'Básico',
+      image:'img/inicio/who2.jpg',
+      text: 'Infórmate todo sobre nosotros, nuestra misión, visión y objetivos como empresa',
+      title: '¿Quienes somos?',
       id: 0
     });
 
     slides.push({
-      image:'img/c5.jpeg',
-      text: 'welcome 2',
-      title: 'Intermedio',
+      image:'img/inicio/courses2.jpeg',
+      text: 'Conoce todos los cursos que ofrecemos para ti, de acuerdo a tu nivel',
+      title: 'Cursos',
       id: 1
     });
 
     slides.push({
-      image:'img/C3.jpg',
-      text: 'welcome 3',
-      title:'Avanzado',
+      image:'img/inicio/test1.jpg',
+      text: 'Pon a prueba todos tus conocimientos en seguridad informática con este sencillo test',
+      title: 'Pruebate',
       id: 2
+    });
+
+    slides.push({
+      image:'img/inicio/tool.jpg',
+      text: 'Preparate con las mejores herramientas de seguridad informática y navega de forma segura',
+      title:'Herramientas',
+      id: 3
+    });
+
+    slides.push({
+      image:'img/inicio/new.jpeg',
+      text: 'Todas las noticias relevantes sobre seguridad informática a la comodidad de un click',
+      title:'Noticias',
+      id: 4
     });
  
 }]);
