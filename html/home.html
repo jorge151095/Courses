@@ -6,6 +6,7 @@
           <div style="height: 305px">
             <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
               <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <a href="#{{slide.url}}">
                 <img ng-src="{{slide.image}}" style="margin:auto;width:100%;max-height:350px"/>
                 <div class="carousel-caption">
                   <h1 style="color:#fff;text-shadow: 0 0 3px #000; /* horizontal-offset vertical-offset 'blur' colour */
@@ -15,6 +16,7 @@
                   -moz-text-shadow: 0 0 3px #000;
                   -webkit-text-shadow: 0 0 3px #000;">{{slide.text}}</h4>
                 </div>
+                </a>
               </div>
             </div>
           </div>
@@ -45,7 +47,7 @@
       </a>
     </article>
     <article class="col-xs-12 col-sm-12 col-md-10  col-lg-6">
-      <a href="#seguridad">
+      <a href="#cursos">
         <md-card>
             <div style="height: 305px">
               <img src="img/inicio/courses1.jpg" style="margin:auto;width:100%;max-height:300px" alt="Washed Out">
@@ -70,7 +72,7 @@
       <article class="col-xs-0 col-sm-0 col-md-1  col-lg-1"></article>
       <!--¿Quienes somos?-->
       <article class="col-xs-12 col-sm-12 col-md-10  col-lg-6">
-        <a href="#">
+        <a href="#tests">
           <md-card>
               <div style="height: 300px">
                 <img src="img/inicio/test2.jpg" style="margin:auto;width:100%;max-height:300px" alt="Washed Out">

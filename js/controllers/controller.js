@@ -9,21 +9,24 @@ app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
       image:'img/inicio/who2.jpg',
       text: 'Infórmate todo sobre nosotros, nuestra misión, visión y objetivos como empresa',
       title: '¿Quienes somos?',
-      id: 0
+      id: 0,
+      url : "acerca"
     });
 
     slides.push({
       image:'img/inicio/courses2.jpeg',
       text: 'Conoce todos los cursos que ofrecemos para ti, de acuerdo a tu nivel',
       title: 'Cursos',
-      id: 1
+      id: 1,
+      url : "cursos"
     });
 
     slides.push({
       image:'img/inicio/test1.jpg',
       text: 'Pon a prueba todos tus conocimientos en seguridad informática con este sencillo test',
       title: 'Pruebate',
-      id: 2
+      id: 2,
+      url : "tests"
     });
 
     slides.push({
@@ -37,7 +40,8 @@ app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
       image:'img/inicio/new.jpeg',
       text: 'Todas las noticias relevantes sobre seguridad informática a la comodidad de un click',
       title:'Noticias',
-      id: 4
+      id: 4,
+      url : "noticias"
     });
  
 }]);

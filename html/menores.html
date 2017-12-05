@@ -1,21 +1,113 @@
+<!-- Head -->
 <div class="titulo">
+    <div class="row">
+        <div class="col-sm-12">
+            <br>
+            <center>
+            <h1 style=" color: #000; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0;">Padres de Familia</h1>
+        </center>
+        </div>
+    </div>
+</div>
+<!-- End Head -->
+
   <div class="row">
     <div class="col-sm-12">
-      <br>
-      <center><h1 style=" color: #000; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0;">Todo para padres de familia</h1></center>
+      <article class="col-xs-0 col-sm-0 col-md-1  col-lg-1"></article>
+      <!--¿Quienes somos?-->
+      <article class="col-xs-12 col-sm-12 col-md-10  col-lg-3">
+        <a href="#noticias">
+          <md-card>
+              <img src="img/padres/privacidad.png" class="md-card-image" alt="Washed Out">
+              <md-card-title>
+              <md-card-title-text>
+                  <span class="md-headline">Privacidad</span>
+              </md-card-title-text>
+              </md-card-title>
+              <md-card-content>
+              <p>
+                Aprende a proteger los datos personales de tus familiares, con esta sencilla guia.
+              </p>
+          </md-card>
+        </a>
+      </article>
+      <article class="col-xs-12 col-sm-12 col-md-10  col-lg-3">
+        <a href="#cursos">
+          <md-card>
+              <div >
+                <img src="img/padres/control.jpg" style="margin:auto;width:100%;max-height:400px" alt="Washed Out">
+              </div>
+              <md-card-title>
+              <md-card-title-text>
+                  <span class="md-headline">Control parental</span>
+              </md-card-title-text>
+              </md-card-title>
+              <md-card-content>
+              <p>
+                Controla lo que pueden ver tus hijos en internet, bloqueo de páginas y aplicaciones.
+              </p>
+          </md-card>
+        </a>
+      </article>
+      <article class="col-xs-12 col-sm-12 col-md-10  col-lg-3">
+          <a href="#cursos">
+            <md-card>
+                <div >
+                  <img src="img/padres/riesgos.jpg" style="margin:auto;width:100%;max-height:400px" alt="Washed Out">
+                </div>
+                <md-card-title>
+                <m<d-card-title-text>
+                    <span class="md-headline">Conoce Riesgos</span>
+                </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                <p>
+                    Infórmate a que riesgos puedes estar expuesto y exponer a tu familia al navegar en internet.
+                </p>
+            </md-card>
+          </a>
+        </article>
     </div>
   </div>
-</div>
-<div ng-controller="mainCtrl">
-  <div style="height: 305px">
-    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-        <img ng-src="{{slide.image}}" style="margin:auto;width:100%;max-height:350px"/>
-        <div class="carousel-caption">
-          <h1 style="color:#fff">{{slide.title}}</h1>
-          <p>{{slide.text}}</p>
-        </div>
+
+  <!--
+  <div class="row">
+      <div class="col-sm-12">
+        <article class="col-xs-0 col-sm-0 col-md-1  col-lg-1"></article>
+        <!--¿Quienes somos?-->
+        <!--<article class="col-xs-12 col-sm-12 col-md-10  col-lg-6">
+          <a href="#tests">
+            <md-card>
+                <div style="height: 300px">
+                  <img src="img/inicio/test2.jpg" style="margin:auto;width:100%;max-height:300px" alt="Washed Out">
+                </div>
+                <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Pruebate</span>
+                </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                <p>
+                    Pon a prueba todos tus conocimientos en seguridad informática con este sencillo test
+                </p>
+            </md-card>
+          </a>
+        </article>
+        <article class="col-xs-12 col-sm-12 col-md-10  col-lg-4">
+          <a href="#">
+            <md-card>
+                <img src="img/inicio/tool.jpg" class="md-card-image" alt="Washed Out">
+                <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Herramientas</span>
+                </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                <p>
+                    Preparate con las mejores herramientas de seguridad informática y navega de forma segura.
+                </p>
+            </md-card>
+          </a>
+        </article>
       </div>
     </div>
-  </div>
-</div>
