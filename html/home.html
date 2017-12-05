@@ -1,42 +1,107 @@
-<article class="col-xs-0 col-sm-0 col-md-1  col-lg-1"></article>
-<article class="col-xs-12 col-sm-12 col-md-10  col-lg-10">
-  <div ng-controller="mainCtrl">
-      <br>
-      <div style="height: 305px">
-        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-          <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-            <img ng-src="{{slide.image}}" style="margin:auto;width:100%;max-height:350px"/>
-            <div class="carousel-caption">
-              <h1 style="color:#fff;text-shadow: 0 0 3px #000; /* horizontal-offset vertical-offset 'blur' colour */
-              -moz-text-shadow: 0 0 3px #000;
-              -webkit-text-shadow: 0 0 3px #000;">{{slide.title}}</h1>
-              <h4 style="color:#fff;text-shadow: 0 0 3px #000; /* horizontal-offset vertical-offset 'blur' colour */
-              -moz-text-shadow: 0 0 3px #000;
-              -webkit-text-shadow: 0 0 3px #000;">{{slide.text}}</h4>
+<div class="row">
+  <div class="col-sm-12"><article class="col-xs-0 col-sm-0 col-md-1  col-lg-1"></article>
+    <article class="col-xs-12 col-sm-12 col-md-10  col-lg-10">
+      <div ng-controller="mainCtrl">
+          <br>
+          <div style="height: 305px">
+            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+              <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}" style="margin:auto;width:100%;max-height:350px"/>
+                <div class="carousel-caption">
+                  <h1 style="color:#fff;text-shadow: 0 0 3px #000; /* horizontal-offset vertical-offset 'blur' colour */
+                  -moz-text-shadow: 0 0 3px #000;
+                  -webkit-text-shadow: 0 0 3px #000;">{{slide.title}}</h1>
+                  <h4 style="color:#fff;text-shadow: 0 0 3px #000; /* horizontal-offset vertical-offset 'blur' colour */
+                  -moz-text-shadow: 0 0 3px #000;
+                  -webkit-text-shadow: 0 0 3px #000;">{{slide.text}}</h4>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-</article>
-<article class="col-xs-0 col-sm-0 col-md-1  col-lg-2"></article>
-<!--End Carrousel-->
+    </article>
+    <!--End Carrousel-->
+  </div>
+</div>
 
-<article class="col-xs-0 col-sm-0 col-md-1  col-lg-1"></article>
-<!--¿Quienes somos?-->
-<!--<article class="col-xs-12 col-sm-12 col-md-10  col-lg-10">
-  <a href="#acerca">
-    <md-card>
-        <img src="img/inicio/who2.jpg" class="md-card-image" alt="Washed Out">
-        <md-card-title>
-        <md-card-title-text>
-            <span class="md-headline">¿Quienes somos?</span>
-        </md-card-title-text>
-        </md-card-title>
-        <md-card-content>
-        <p>
-            Conoce todo sobre nosotros, nuestra misión, visión y objetivos como empresa.
-        </p>
-    </md-card>
-  </a>
-</article>-->
+<div class="row">
+  <div class="col-sm-12">
+    <article class="col-xs-0 col-sm-0 col-md-1  col-lg-1"></article>
+    <!--¿Quienes somos?-->
+    <article class="col-xs-12 col-sm-12 col-md-10  col-lg-4">
+      <a href="#noticias">
+        <md-card>
+            <img src="img/inicio/new.jpeg" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Noticias</span>
+            </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+            <p>
+              Todas las noticias relevantes sobre seguridad informática a la comodidad de un click. Conoce los últimos sucesos y mantente actualizado.
+            </p>
+        </md-card>
+      </a>
+    </article>
+    <article class="col-xs-12 col-sm-12 col-md-10  col-lg-6">
+      <a href="#seguridad">
+        <md-card>
+            <div style="height: 305px">
+              <img src="img/inicio/courses1.jpg" style="margin:auto;width:100%;max-height:300px" alt="Washed Out">
+            </div>
+            <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Cursos</span>
+            </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+            <p>
+              Conoce todos los cursos que ofrecemos para ti, vuelvete un experto en esta era digital.
+            </p>
+        </md-card>
+      </a>
+    </article>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+      <article class="col-xs-0 col-sm-0 col-md-1  col-lg-1"></article>
+      <!--¿Quienes somos?-->
+      <article class="col-xs-12 col-sm-12 col-md-10  col-lg-6">
+        <a href="#">
+          <md-card>
+              <div style="height: 300px">
+                <img src="img/inicio/test2.jpg" style="margin:auto;width:100%;max-height:300px" alt="Washed Out">
+              </div>
+              <md-card-title>
+              <md-card-title-text>
+                  <span class="md-headline">Pruebate</span>
+              </md-card-title-text>
+              </md-card-title>
+              <md-card-content>
+              <p>
+                  Pon a prueba todos tus conocimientos en seguridad informática con este sencillo test
+              </p>
+          </md-card>
+        </a>
+      </article>
+      <article class="col-xs-12 col-sm-12 col-md-10  col-lg-4">
+        <a href="#">
+          <md-card>
+              <img src="img/inicio/tool.jpg" class="md-card-image" alt="Washed Out">
+              <md-card-title>
+              <md-card-title-text>
+                  <span class="md-headline">Herramientas</span>
+              </md-card-title-text>
+              </md-card-title>
+              <md-card-content>
+              <p>
+                  Preparate con las mejores herramientas de seguridad informática y navega de forma segura.
+              </p>
+          </md-card>
+        </a>
+      </article>
+    </div>
+  </div>
