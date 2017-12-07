@@ -130,6 +130,13 @@ app.controller("avanzadoCtrl",["$scope","$location","$anchorScroll","$sce","dato
       ]
     }
   ];
+
+  $scope.tema = datos.data;
+  console.log(MyService.data.id)
+  if(MyService.data.id != undefined){
+    $scope.tema = $scope.temas[MyService.data.id];
+  }
+
   $anchorScroll();
   $scope.ir = function(tema){
     datos.data = tema;
@@ -160,13 +167,4 @@ app.controller("avanzadoCtrl",["$scope","$location","$anchorScroll","$sce","dato
     }
     return true;
   };
-
-  if(MyService.data != null){
-    $scope.tema = $scope.temas[MyService.data.id];
-  }else{
-    $scope.tema = datos.data;
-  }
-  
-
-
 }]);

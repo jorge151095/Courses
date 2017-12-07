@@ -156,6 +156,13 @@ app.controller("basicoCtrl",["$scope","$location","$anchorScroll","$sce","datos"
       ]
     }
   ];
+
+  $scope.tema = datos.data;
+  console.log(MyService.data.id)
+  if(MyService.data.id != undefined){
+    $scope.tema = $scope.temas[MyService.data.id];
+  }
+  
   $anchorScroll();
   $scope.ir = function(tema){
     datos.data = tema;
@@ -180,11 +187,7 @@ app.controller("basicoCtrl",["$scope","$location","$anchorScroll","$sce","datos"
     return false;
   };
 
-  if(MyService.data != null){
-    $scope.tema = $scope.temas[MyService.data.id];
-  }else{
-    $scope.tema = datos.data;
-  }
+ 
 
   $scope.isPrevious = function(){
     if ($scope.tema.id <= 0) {
