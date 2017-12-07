@@ -40,21 +40,33 @@ app.config(function($routeProvider) {
         templateUrl : 'html/seguridad.html',
         controller  : 'seguridadCtrl'
     })
-    .when('/basico', {
-        templateUrl : 'html/basico.html',
-        controller  : 'seguridadCtrl'
-    })
-    .when('/intermedio', {
-        templateUrl : 'html/intermedio.html',
-        controller  : 'seguridadCtrl'
-    })
-    .when('/avanzado', {
-        templateUrl : 'html/avanzado.html',
-        controller  : 'seguridadCtrl'
-    })
     .when('/guia', {
         templateUrl : 'html/guia.html',
         controller: 'guiaCtrl'
+    })
+    .when('/basico', {
+        templateUrl : 'html/basico.html',
+        controller  : 'basicoCtrl'
+    })
+    .when('/temaBasico', {
+        templateUrl : 'html/temaBasico.html',
+        controller  : 'basicoCtrl'
+    })
+    .when('/intermedio', {
+        templateUrl : 'html/intermedio.html',
+        controller  : 'intermedioCtrl'
+    })
+    .when('/temaIntermedio', {
+        templateUrl : 'html/temaIntermedio.html',
+        controller  : 'intermedioCtrl'
+    })
+    .when('/avanzado', {
+        templateUrl : 'html/avanzado.html',
+        controller  : 'avanzadoCtrl'
+    })
+    .when('/temaAvanzado', {
+        templateUrl : 'html/temaAvanzado.html',
+        controller  : 'avanzadoCtrl'
     })
     .otherwise({
         redirectTo: '/menu',
