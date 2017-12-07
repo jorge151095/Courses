@@ -42,7 +42,7 @@ app.controller("basicoCtrl",["$scope","$location","$anchorScroll","$sce","datos"
         'id':0,
         'titulo':"¿Qué hay que proteger? ",
         'descripcion': "Introducción a la seguridad informática, sus amenazas y las medidas de seguridad indispensables.",
-        'fuente' : $sce.trustAsResourceUrl("https://www.youtube.com/watch?v=gQrBlLZqMt0"),
+        'fuente' : $sce.trustAsResourceUrl("https://www.youtube.com/embed/gQrBlLZqMt0"),
         'contenido': "Es evidente la necesidad de proteger la información.<br>Pero es muy difícil concretar qué es lo que hay que proteger, dado que el concepto de información es, en sí mismo, poco claro.",
         'subtemas':[
             {
@@ -68,7 +68,7 @@ app.controller("basicoCtrl",["$scope","$location","$anchorScroll","$sce","datos"
       'id':1,
         'titulo':"Conceptos de seguridad informática. ",
         'descripcion': "Nos será primero de suma utilidad saber precisamente a qué nos estamos refiriendo con seguridad.",
-        'fuente' : $sce.trustAsResourceUrl("https://www.youtube.com/watch?v=4RLCzcPPXYs"),
+        'fuente' : $sce.trustAsResourceUrl("https://www.youtube.com/embed/4RLCzcPPXYs"),
         'contenido': "Desde hace poco más de dos décadas, muchas personas han creado sus propias significaciones para explicar la idea del tema, intentando ser lo más acertadas posible.<br><center>LA SEGURIDAD TIENE ACEPCIONES DEPENDIENDO DEL CONTEXTO PARTICULAR DE USO</center><br>",
         'subtemas':[
             {
@@ -93,7 +93,7 @@ app.controller("basicoCtrl",["$scope","$location","$anchorScroll","$sce","datos"
       'id':2,
       'titulo':"Criterios o servicios de seguridad.",
       'descripcion': "El ITSEC (Information Technology Security Evaluation Criteria) define los siguientes criterios de seguridad.",
-      'fuente' : $sce.trustAsResourceUrl("https://www.youtube.com/watch?v=3Rg-n6UuF7w"),
+      'fuente' : $sce.trustAsResourceUrl("https://www.youtube.com/embed/3Rg-n6UuF7w"),
       'contenido': "El ITSEC (Information Technology Security Evaluation Criteria) define los siguientes criterios de seguridad:",
       'subtemas':[
           {
@@ -145,7 +145,7 @@ app.controller("basicoCtrl",["$scope","$location","$anchorScroll","$sce","datos"
       'id':3,
       'titulo':"Seguridad en internet ",
       'descripcion': "Para pensar en una navegación segura, lo primero por tener en cuenta es el cuidado de la información personal del propio usuario.",
-      'fuente' : $sce.trustAsResourceUrl("https://www.youtube.com/watch?v=kUeppDBSehY"),
+      'fuente' : $sce.trustAsResourceUrl("https://www.youtube.com/embed/kUeppDBSehY"),
       'contenido': "Para pensar en una navegación segura, lo primero por tener en cuenta es el cuidado de la información personal del propio usuario. Con el fin de no ser blanco de ningún tipo de ataque,hay que ser lo más anónimo posible.",
       'subtemas':[
           {
@@ -170,7 +170,7 @@ app.controller("basicoCtrl",["$scope","$location","$anchorScroll","$sce","datos"
       'id':4,
       'titulo':"Virus vs Antivirus",
       'descripcion': "Los virus son la más antigua de las amenazas informáticas.",
-      'fuente' : $sce.trustAsResourceUrl("https://www.youtube.com/watch?v=ZwTt-QkbH68&t"),
+      'fuente' : $sce.trustAsResourceUrl("https://www.youtube.com/embed/ZwTt-QkbH68"),
       'contenido': "Un virus es un programa que puede reproducirse en forma automática haciendo copias de sí mismo.",
       'subtemas':[
           {
