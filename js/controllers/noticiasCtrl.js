@@ -6,7 +6,7 @@ app.factory('MyService', function() {
 
 app.controller('noticiasCtrl',function($scope,$location,MyService){
 
-    $scope.goToNew = function(title,summary,image,date,content,link){
+      $scope.goToNew = function(title,summary,image,date,content,link){
       MyService.data.title = title;
       MyService.data.summary = summary;
       MyService.data.image = image;

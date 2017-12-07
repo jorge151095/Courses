@@ -33,7 +33,7 @@ app.controller('seguridadCtrl',function($scope){
             { name: '5.3 La prevención  antivirus', url: '' },
             { name: '5.4 El antivirus en acción', url: '' }
         ];
-    
+
         $scope.is1 = [
             { name: '1.1 Las buenas prácticas que no siempre se cumplen', url: '' }
         ];
@@ -54,7 +54,7 @@ app.controller('seguridadCtrl',function($scope){
             { name: '5.2 Diferencias entre adware, spywate y virus', url: '' },
             { name: '5.3 Limpiar y proteger el equipo', url: '' }
         ];
-        
+
         $scope.is6 = [
             { name: '6.1 Prinicipo de menor privilegio', url: '' },
             { name: '6.2 Oscuridad no equivalente a seguridad', url: '' },
