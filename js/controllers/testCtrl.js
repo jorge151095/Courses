@@ -1,8 +1,4 @@
-app.factory('MyService', function() {
-    return {
-      data: {}
-    };
-});
+
 
 app.controller('testCtrl',function($scope,$location,MyService){
     $scope.ub = [
@@ -85,7 +81,87 @@ app.controller('testCtrl',function($scope,$location,MyService){
         "o2" : "Sí, con un firewall apropiado.",
         "o3" : "Sí, con la encriptación de datos.",
         "oc" : "3"
-        ,"img":"img/test/ub/enc.jpg"}
+        ,"img":"img/test/ub/enc.jpg"},
+        {
+        "q" : "¿Cuál es la diferencia entre software libre y Software gratuito",
+        "id" : 11,
+        "o1" : "Es lo mismo",
+        "o2" : "El software cuya descarga es gratuita no siempre es libre",
+        "o3" : "El software libre incluye adware o amenazas",
+        "oc" : "2"
+        ,"img":"img/test/ub/soft.jpg"},
+        {
+        "q" : "¿Qué es un hacker?",
+        "id" : 12,
+        "o1" : "Un gran experto en algún área de dominio.",
+        "o2" : "Alguien que viola la seguridad de un sistema",
+        "o3" : "Un ladrón de contraseñas",
+        "oc" : "1"
+        ,"img":"img/test/ub/hacker.png"},
+        {
+        "q" : "¿En donde es recomendable usar datos personales?",
+        "id" : 13,
+        "o1" : "Bibliotecas",
+        "o2" : "Wi-fi público",
+        "o3" : "Casa",
+        "oc" : "3"
+        ,"img":"img/padres/pass.jpg"},
+        {
+        "q" : "Son características de una contraseña fuerte excepto",
+        "id" : 14,
+        "o1" : "Longitud mínima de ocho caracteres.",
+        "o2" : "Combina mayúsculas y minúsculas, números y símbolos",
+        "o3" : "Usar nombres y datos personales",
+        "oc" : "3"
+        ,"img":"img/padres/pass.jpg"},
+        {
+        "q" : "¿Qué es un virus?",
+        "id" : 15,
+        "o1" : "Es una enfermdad que produce la muerte",
+        "o2" : "Un programa que puede reporducirse a si mismo",
+        "o3" : "Programa con fines de lucro",
+        "oc" : "2"
+        ,"img":"img/padres/virus.png"},
+        {
+        "q" : "¿Qué es la ingeniería social?",
+        "id" : 16,
+        "o1" : "Es un ataque psicológico a través del cual el delincuente te engaña para realizar algo que no deberías hacer",
+        "o2" : "Es una disciplina que intenta ayudar a la sociedad por medio de ingeniería",
+        "o3" : "Son sistemas computacionales que ayudan a resolver problemas de la sociedad",
+        "oc" : "1"
+        ,"img":"img/test/ub/si.jpeg"},
+        {
+        "q" : "¿Qué es el pishing?",
+        "id" : 17,
+        "o1" : "Técnica usada para obtener información confidencial",
+        "o2" : "Un día de pesca",
+        "o3" : "Programa que daña el equipo de cómputo",
+        "oc" : "1"
+        ,"img":"img/test/ub/phising.jpg"},
+        {
+        "q" : "¿Existen más sistemas operativos a parte de Windows?",
+        "id" : 18,
+        "o1" : "No, solo diferentes versiones de Windows",
+        "o2" : "Si, por ejemplo Sistemas Operativos Linux",
+        "o3" : "Solo MacOS",
+        "oc" : "2"
+        ,"img":"img/test/ub/windows.png"},
+        {
+        "q" : "¿Es bueno encriptar nuestros datos?",
+        "id" : 19,
+        "o1" : "Si, nos ayuda a protegerlos",
+        "o2" : "No porque daña nuestros archivos",
+        "o3" : "Si, nos ayuda a que se reduzca el tamaño del archivo",
+        "oc" : "1"
+        ,"img":"img/test/ub/encrypt.jpg"},
+        {
+        "q" : "¿Qué es el Pharming?",
+        "id" : 20,
+        "o1" : "Término usado para referirse a una cadena de farmacias",
+        "o2" : "Fraude al momento de realizar transferencias monetarias en internet",
+        "o3" : "Robo de tarjetas de crédito",
+        "oc" : "2"
+        ,"img":"img/test/ub/pharming.jpg"}
         ];
 
         $scope.ac = MyService.data.ac;
@@ -146,7 +222,7 @@ app.controller('testCtrl',function($scope,$location,MyService){
             }
         }
         
-        var nextRandomFromList = randomFromListGenerator ([0,1,2,3,4,5,6,7,8,9]);
+        var nextRandomFromList = randomFromListGenerator ([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
 
         //Cont
         $scope.result = -1;
