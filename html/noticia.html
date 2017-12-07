@@ -28,6 +28,13 @@
                 <div ng-bind-html="content">    
                 </div>
                 </p>
+                <center>
+                    <audio controls>
+                    <!--<source src="audio/auto.mp3" type="audio/mp3">-->
+                    <source src="{{audio}}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    </audio>
+                </center>
                 <b>Noticia completa <a href={{link}}>Aquí</a></b><br><br>
                 <a href="#noticias"><img src="img/bb.png"></a>
                 <!--<md-button style="background-color:#95e1d3" href="#noticias">Regresar</md-button>-->

@@ -4,7 +4,7 @@ app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [];
-  
+
     slides.push({
       image:'img/inicio/who2.jpg',
       text: 'Infórmate todo sobre nosotros, nuestra misión, visión y objetivos como empresa',
