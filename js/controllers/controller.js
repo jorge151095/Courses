@@ -22,10 +22,18 @@ app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
     });
 
     slides.push({
+      image:'img/inicio/tech.JPG',
+      text: 'Si eres padre de familia y deseas aprender sobre seguridad informatica para cuidar a tus hijos, da click aquí',
+      title:'Padres de familia',
+      id: 2,
+      url : "menores"
+    });
+
+    slides.push({
       image:'img/inicio/test1.jpg',
       text: 'Pon a prueba todos tus conocimientos en seguridad informática con este sencillo test',
       title: 'Pruebate',
-      id: 2,
+      id: 3,
       url : "tests"
     });
 
@@ -34,15 +42,25 @@ app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
       text: 'Preparate con las mejores herramientas de seguridad informática y navega de forma segura',
       title:'Herramientas',
       url : "menores#herramientas",
-      id: 3
+      id: 4
     });
 
     slides.push({
       image:'img/inicio/new.jpeg',
       text: 'Todas las noticias relevantes sobre seguridad informática a la comodidad de un click',
       title:'Noticias',
-      id: 4,
+      id: 5,
       url : "noticias"
     });
+
+    slides.push({
+      image:'img/inicio/help.jpg',
+      text: '¿No sabes como navegar en nuestra página web? Ve este sencillo tutorial',
+      title:'Ayuda',
+      id: 6,
+      url : "ayuda"
+    });
+
+    
  
 }]);
