@@ -4,39 +4,8 @@ app.factory('datos', function() {
   };
 });
 
-app.controller("basicoCtrl",["$scope","$location","$anchorScroll","$sce","datos",function($scope,$location,$anchorScroll,$sce,datos) {
-  $anchorScroll();
-  $scope.ir = function(tema){
-    datos.data = tema;
-    $location.path('/temaBasico').replace();
-  };
-
-  $scope.sigTema = function(){
-    $scope.tema = $scope.temas[$scope.tema.id+1];
-    $anchorScroll();
-    $location.path('/temaBasico').replace();
-  };
-  $scope.antTema = function(){
-    $scope.tema = $scope.temas[$scope.tema.id-1];
-    $anchorScroll();
-    $location.path('/temaBasico').replace();
-  };
-
-  $scope.isNext = function(){
-    if ( ($scope.tema.id+1) < $scope.temas.length) {
-      return true;
-    }
-    return false;
-  };
-
-  $scope.isPrevious = function(){
-    if ($scope.tema.id <= 0) {
-      return false;
-    }
-    return true;
-  };
-
-  $scope.tema = datos.data;
+app.controller("basicoCtrl",["$scope","$location","$anchorScroll","$sce","datos","MyService",function($scope,$location,$anchorScroll,$sce,datos,MyService) {
+  
   $scope.temas = [
     {
         'id':0,
@@ -187,6 +156,40 @@ app.controller("basicoCtrl",["$scope","$location","$anchorScroll","$sce","datos"
       ]
     }
   ];
+  $anchorScroll();
+  $scope.ir = function(tema){
+    datos.data = tema;
+    $location.path('/temaBasico').replace();
+  };
 
+  $scope.sigTema = function(){
+    $scope.tema = $scope.temas[$scope.tema.id+1];
+    $anchorScroll();
+    $location.path('/temaBasico').replace();
+  };
+  $scope.antTema = function(){
+    $scope.tema = $scope.temas[$scope.tema.id-1];
+    $anchorScroll();
+    $location.path('/temaBasico').replace();
+  };
 
+  $scope.isNext = function(){
+    if ( ($scope.tema.id+1) < $scope.temas.length) {
+      return true;
+    }
+    return false;
+  };
+
+  if(MyService.data != null){
+    $scope.tema = $scope.temas[MyService.data.id];
+  }else{
+    $scope.tema = datos.data;
+  }
+
+  $scope.isPrevious = function(){
+    if ($scope.tema.id <= 0) {
+      return false;
+    }
+    return true;
+  };
 }]);
