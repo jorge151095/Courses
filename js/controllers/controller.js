@@ -33,6 +33,7 @@ app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
       image:'img/inicio/tool.jpg',
       text: 'Preparate con las mejores herramientas de seguridad informática y navega de forma segura',
       title:'Herramientas',
+      url : "menores#herramientas",
       id: 3
     });
 
