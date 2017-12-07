@@ -1,0 +1,39 @@
+<div class="titulo">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <br></br>
+                <center>
+                <h3 style=" color: #000; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0;">{{textresult}}</h3>
+                </center>
+            </div>
+        </div>
+</div>
+
+<div class="titulo">
+        <div class="row">
+            <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <center><img class = 'img-responsive' alt='Imagen' src='{{imgr}}'></center>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div class="titulo">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div ng-repeat = "tmn in resultall">
+                <h3><img class = 'img-responsive' alt='Imagen' src='{{tmn.icon}}'>Pregunta: {{tmn.q}}</h3>
+                <h4>Resupuesta correcta: {{tmn.rc}}</h4>
+                <br>
+            </div>
+            <center>
+            <a href="#tests"><img src="img/bb.png"></a>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#menu"><img src="img/home.png"></a>
+            </center>
+        </div>
+    </div>
+</div>

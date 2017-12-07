@@ -28,6 +28,14 @@ app.config(function($routeProvider) {
         templateUrl : 'html/tests.html',
         controller: 'testCtrl'
     })
+    .when('/test', {
+        templateUrl : 'html/test.html',
+        controller: 'testCtrl'
+    })
+    .when('/retroalimentacion', {
+        templateUrl : 'html/retroalimentacion.html',
+        controller: 'testCtrl'
+    })
     .when('/cursos', {
         templateUrl : 'html/seguridad.html',
         controller  : 'seguridadCtrl'

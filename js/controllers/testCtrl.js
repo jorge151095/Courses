@@ -1,25 +1,11 @@
-/*app.factory('MyService', function() {
+app.factory('MyService', function() {
     return {
       data: {}
     };
-  });*/
+});
 
 app.controller('testCtrl',function($scope,$location,MyService){
-        $scope.result = -1;
-        $scope.j = 0;
-        $scope.next = function(){
-            if ($scope.oc == $scope.result)
-                $scope.j = $scope.j + 1;
-            var i = Math.floor((Math.random() * $scope.ub.length - 1) + 1);
-            $scope.img = $scope.ub[i].img;
-            $scope.q = $scope.ub[i].q;
-            $scope.o1 = $scope.ub[i].o1;
-            $scope.o2 = $scope.ub[i].o2;
-            $scope.o3 = $scope.ub[i].o3;
-            $scope.oc = $scope.ub[i].oc;
-        };
-
-        $scope.ub = [
+    $scope.ub = [
         {
         "q" : "¿Qué es una red zombi",
         "id" : 1,
@@ -34,7 +20,7 @@ app.controller('testCtrl',function($scope,$location,MyService){
         "o1" : "Lammer",
         "o2" : "Script kiddie",
         "o3" : "Newbie",
-        "oc" : 1
+        "oc" : "1"
         ,"img":"img/test/ub/lammer.jpg"},
         {
         "q" : "¿Existen los firewalls que actúan por hardware?",
@@ -81,8 +67,8 @@ app.controller('testCtrl',function($scope,$location,MyService){
         "id" : 8,
         "o1" : "Acercar publicidad.",
         "o2" : "Ayudar a focalizar promociones de ventas.",
-        "o3" : "Dañar el equipo.",
-        "oc" : "2"
+        "o3" : "Obtener información",
+        "oc" : "3"
         ,"img":"img/test/ub/spy.jpg"},
         {
         "q" : "¿Qué significa WPA?",
@@ -102,7 +88,102 @@ app.controller('testCtrl',function($scope,$location,MyService){
         ,"img":"img/test/ub/enc.jpg"}
         ];
 
+        $scope.ac = MyService.data.ac;
+        $scope.arrayfailaux = MyService.data.arrayfail;
         
+        //Verify if array of order is not null
+        if (MyService.data.arrayordernumber != null){
+            $scope.arrayordernumber = MyService.data.arrayordernumber;
+        }else{
+            $scope.arrayordernumber = [];
+        }
+
+        //Select correct Answer
+        if ($scope.ac == 10){
+            $scope.imgr = "img/test/perfect.png";
+            $scope.textresult = "Perfecto, eres todo un gurú en el área";
+        } else if ($scope.ac > 6 && $scope.ac < 10){
+            $scope.imgr = "img/test/medio.png";
+            $scope.textresult = "En hora buena, has tenido un buen resultado, sigue perfeccionandote";
+        } else {
+            $scope.imgr = "img/test/reprobado.jpg";
+            $scope.textresult = "Ups, te recomendamos darle un repaso a los temas";
+        }
+
+        $scope.resultall = []; //Array of results
+
+        //Set array of results
+        $scope.arrayordernumber.forEach(function(element) {
+            //Find ANSWER TO QUESTION
+            if ($scope.ub[element].oc == "1"){ respc = $scope.ub[element].o1;}
+            else if ($scope.ub[element].oc == "2"){ respc = $scope.ub[element].o2;}
+            else { respc = $scope.ub[element].o3;}
+
+            //FIND ICON
+            if ($scope.arrayfailaux.indexOf(element) == -1){
+                url = "img/test/ok.png";
+            } else {
+                url = "img/test/cancelar.png";
+            }
+
+            obj = {"q":$scope.ub[element].q,"rc":respc,"icon":url};
+            $scope.resultall.push(obj);
+        });
+        //console.log($scope.resultall);
+
+        var randomFromListGenerator = function (list) {
+            var position = 0;
+        
+            for (var i=0, l=list.length; i<l; i++) {
+                var random = Math.floor((Math.random() * l));
+                var aux = list[i];
+                list[i] = list[random];
+                list[random] = aux;
+            }
+        
+            return function () {
+                return list[position++ % list.length];
+            }
+        }
+        
+        var nextRandomFromList = randomFromListGenerator ([0,1,2,3,4,5,6,7,8,9]);
+
+        //Cont
+        $scope.result = -1;
+        $scope.ac = 0; //OK
+        $scope.er = -1; //Fail
+        $scope.num = 0; //Number question
+        $scope.arrayfail = []; //Array fails
+        $scope.arrayordernumber = []; //Order of numbers
+
+        //Function to new Question
+        $scope.next = function(){
+            if ($scope.oc == $scope.result){ //Question acert
+                $scope.ac = $scope.ac + 1;
+            }else{
+                $scope.er = $scope.er + 1;
+                if ($scope.er != 0)
+                    $scope.arrayfail.push($scope.i);
+                //console.log($scope.arrayfail);
+            }
+            //When number the cuestion is terminated
+            if ($scope.num == 10){
+                MyService.data.ac = $scope.ac;
+                MyService.data.arrayfail = $scope.arrayfail;
+                MyService.data.arrayordernumber = $scope.arrayordernumber;
+                $location.path('/retroalimentacion').replace();
+            }else{
+                $scope.i = nextRandomFromList(); //get pos i
+                $scope.arrayordernumber.push($scope.i);
+                $scope.img = $scope.ub[$scope.i].img;
+                $scope.q = $scope.ub[$scope.i].q;
+                $scope.o1 = $scope.ub[$scope.i].o1;
+                $scope.o2 = $scope.ub[$scope.i].o2;
+                $scope.o3 = $scope.ub[$scope.i].o3;
+                $scope.oc = $scope.ub[$scope.i].oc;
+                $scope.num = $scope.num + 1;
+            }
+        };
         $scope.next();
     });
     
